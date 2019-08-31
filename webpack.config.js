@@ -40,7 +40,7 @@ module.exports = env => {
     plugins: [
       new CleanWebpackPlugin(),
       new CopyPlugin([
-        { from: 'node_modules/@webcomponents/webcomponentsjs', to: 'webcomponentsjs' },
+        { from: 'public/webcomponentsjs', to: 'webcomponentsjs' },
       ]),
       new HtmlWebpackPlugin({
         inject: 'head',

@@ -30,9 +30,7 @@
     "webpack-cli": "^3.3.7",
     "webpack-dev-server": "^3.8.0"
   },
-  "dependencies": {
-    "@webcomponents/webcomponentsjs": "^2.2.10"
-  },
+  "dependencies": {},
   "peerDependencies": {
     "@webcomponents/webcomponentsjs": "^2.2.10"
   }
