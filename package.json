@@ -2,7 +2,7 @@
   "name": "wc-example",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/bundle.js",
   "scripts": {
     "lint": "eslint src/**.ts",
     "build": "webpack --env.MODE=production",
