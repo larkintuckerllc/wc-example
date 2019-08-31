@@ -14,7 +14,6 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^2.0.0",
     "@typescript-eslint/parser": "^2.0.0",
-    "@webcomponents/webcomponentsjs": "^2.2.10",
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^5.0.4",
     "eslint": "^6.1.0",
@@ -31,5 +30,10 @@
     "webpack-cli": "^3.3.7",
     "webpack-dev-server": "^3.8.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@webcomponents/webcomponentsjs": "^2.2.10"
+  },
+  "peerDependencies": {
+    "@webcomponents/webcomponentsjs": "^2.2.10"
+  }
 }
