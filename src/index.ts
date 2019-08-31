@@ -1,26 +1,10 @@
-import { Router } from '@vaadin/router';
-import './A';
-import './B';
-import './Fruit';
-import './Home';
-import './Nav';
-import './NotFound';
-
-const rootEl = document.getElementById('root');
-const router = new Router(rootEl);
-router.setRoutes([
-  { path: '/', component: 'hello-home' },
-  { path: '/a', component: 'hello-a' },
-  { path: '/b', component: 'hello-b' },
-  {
-    path: '/nav',
-    component: 'hello-nav',
-    children: [
-      { path: '/a', component: 'hello-a' },
-      { path: '/b', component: 'hello-b' },
-      { path: '(.*)', component: 'hello-not-found' },
-    ],
-  },
-  { path: '/fruit/:id', component: 'hello-fruit' },
-  { path: '(.*)', component: 'hello-not-found' },
-]);
+class HelloWorld extends HTMLElement {
+  constructor() {
+    super();
+    const shadow = this.attachShadow({ mode: 'closed' });
+    const rootEl = document.createElement('div');
+    rootEl.textContent = 'Hello World';
+    shadow.appendChild(rootEl);
+  }
+}
+window.customElements.define('hello-world', HelloWorld);

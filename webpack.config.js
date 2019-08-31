@@ -10,7 +10,6 @@ module.exports = env => {
     devtool: env.MODE === 'development' ? 'inline-source-map' : 'none',
     devServer: {
       contentBase: './dist',
-      historyApiFallback: true
     },
     module: {
       rules: [
@@ -44,6 +43,7 @@ module.exports = env => {
         { from: 'node_modules/@webcomponents/webcomponentsjs', to: 'webcomponentsjs' },
       ]),
       new HtmlWebpackPlugin({
+        inject: 'head',
         template: 'public/index.html'
       })
     ]
