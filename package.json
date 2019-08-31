@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "dist/bundle.js",
-  "types": "main.d.ts",
   "scripts": {
     "lint": "eslint src/**.ts",
     "build": "webpack --env.MODE=production",
