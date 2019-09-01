@@ -1,4 +1,4 @@
-class HelloWorld extends HTMLElement {
+class MyHelloWorld extends HTMLElement {
   static get observedAttributes(): string[] {
     return ['color'];
   }
@@ -90,4 +90,4 @@ class HelloWorld extends HTMLElement {
   };
 }
 
-window.customElements.define('hello-world', HelloWorld);
+window.customElements.define('hello-world', MyHelloWorld);
