@@ -1,4 +1,4 @@
-class MyHelloWorld extends HTMLElement {
+class HelloWorld extends HTMLElement {
   static get observedAttributes(): string[] {
     return ['color'];
   }
@@ -11,11 +11,7 @@ class MyHelloWorld extends HTMLElement {
 
   private rootValueEl: HTMLElement;
 
-  private rootValueExtEl: HTMLElement;
-
   private value = 0;
-
-  private valueExt = 0;
 
   constructor() {
     super();
@@ -53,11 +49,6 @@ class MyHelloWorld extends HTMLElement {
     this.rootButtonEl.textContent = 'increment';
     rootEl.appendChild(this.rootButtonEl);
 
-    // VALUE_EXT
-    this.rootValueExtEl = document.createElement('div');
-    this.rootValueExtEl.textContent = this.valueExt.toString();
-    rootEl.appendChild(this.rootValueExtEl);
-
     shadow.appendChild(rootEl);
   }
 
@@ -79,15 +70,10 @@ class MyHelloWorld extends HTMLElement {
     this.rootButtonEl.removeEventListener('click', this.handleClick);
   }
 
-  public increment(): void {
-    this.valueExt += 1;
-    this.rootValueExtEl.textContent = this.valueExt.toString();
-  }
-
   private handleClick = (): void => {
     this.value += 1;
     this.rootValueEl.textContent = this.value.toString();
   };
 }
 
-window.customElements.define('hello-world', MyHelloWorld);
+window.customElements.define('hello-world', HelloWorld);

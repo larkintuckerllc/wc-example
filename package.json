@@ -1,9 +1,8 @@
 {
   "name": "wc-example",
-  "version": "0.1.5",
+  "version": "0.1.10",
   "description": "",
   "main": "dist/bundle.js",
-  "types": "index.d.ts",
   "scripts": {
     "lint": "eslint src/**.ts",
     "build": "webpack --env.MODE=production",
