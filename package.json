@@ -1,6 +1,6 @@
 {
   "name": "wc-example",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "",
   "main": "dist/bundle.js",
   "scripts": {
